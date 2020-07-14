@@ -1,5 +1,5 @@
 <app-divider>Modal Component</app-divider>
-<button (click)="onClick()">Show Modal</button>
+<button (click)="onClick()" class="ui primary button">Show Modal</button>
 <app-modal *ngIf="modalOpen" (close)="onClick()">
   <div modalTitle>I am a Reusable Title</div>
   <p>Some content for the modal windows should go right here though!</p>
@@ -7,3 +7,30 @@
     <button class="ui button" (click)="onClick()">Close Me!</button>
   </ng-container>
 </app-modal>
+
+<app-divider>Accordion Component</app-divider>
+<app-accordion [items]="items"></app-accordion>
+
+<app-divider>Accordian by SuiModule</app-divider>
+<sui-accordion class="styled fluid">
+  <sui-accordion-panel [isOpen]="true">
+    <div title>
+      <i class="dropdown icon"></i>
+      First Panel
+    </div>
+    <div content>
+      <p>
+        Add classes to the <code>sui-accordion</code> element to apply styles.
+      </p>
+    </div>
+  </sui-accordion-panel>
+  <sui-accordion-panel>
+    <div title>
+      <i class="dropdown icon"></i>
+      Second Panel
+    </div>
+    <div content>
+      <p>Second panel content.</p>
+    </div>
+  </sui-accordion-panel>
+</sui-accordion>

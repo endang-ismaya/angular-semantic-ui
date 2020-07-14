@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SuiModule } from 'ng2-semantic-ui';
 
 import { ModsRoutingModule } from './mods-routing.module';
 import { ModsHomeComponent } from './mods-home/mods-home.component';
 import { ModalComponent } from './modal/modal.component';
 import { SharedModule } from '../shared/shared.module';
+import { AccordionComponent } from './accordion/accordion.component';
 
 @NgModule({
-  declarations: [ModsHomeComponent, ModalComponent],
-  imports: [CommonModule, ModsRoutingModule, SharedModule],
+  declarations: [ModsHomeComponent, ModalComponent, AccordionComponent],
+  imports: [SuiModule, CommonModule, ModsRoutingModule, SharedModule],
   exports: [],
 })
 export class ModsModule {}
