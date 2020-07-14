@@ -3,13 +3,29 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-views-home',
   templateUrl: './views-home.component.html',
-  styleUrls: ['./views-home.component.css']
+  styleUrls: ['./views-home.component.css'],
 })
 export class ViewsHomeComponent implements OnInit {
+  stats = [
+    { value: 22, label: '# of Users' },
+    { value: 900, label: 'Revenue' },
+    { value: 50, label: 'Reviews' },
+  ];
 
-  constructor() { }
+  items = [
+    {
+      imageUrl: '/assets/img/couch.jpeg',
+      title: 'Couch',
+      description: 'This is fantastic couch to sit on',
+    },
+    {
+      imageUrl: '/assets/img/dresser.jpeg',
+      title: 'Dresser',
+      description: 'This is fantastic dresser to put on',
+    },
+  ];
 
-  ngOnInit(): void {
-  }
+  constructor() {}
 
+  ngOnInit(): void {}
 }
